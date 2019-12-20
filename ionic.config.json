@@ -1,0 +1,7 @@
+{
+  "name": "uberduck",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
