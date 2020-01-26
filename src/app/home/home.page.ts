@@ -52,7 +52,7 @@ export class HomePage implements OnInit {
   favorites = [
     {
       name: 'Rosaparks',
-      note: '4,7',
+      rating: '4,7',
       type: 'fast-food',
       price: '$$',
       deliveryTime: '20-30',
@@ -61,7 +61,7 @@ export class HomePage implements OnInit {
     },
     {
       name: 'Fnac',
-      note: '4,3',
+      rating: '4,3',
       type: 'Cadeaux',
       price: '$$',
       deliveryTime: '10-15',
@@ -70,7 +70,7 @@ export class HomePage implements OnInit {
     },
     {
       name: 'LDLC',
-      note: '4,5',
+      rating: '4,5',
       type: 'Tech',
       price: '$$$',
       deliveryTime: '45-60',
@@ -79,7 +79,7 @@ export class HomePage implements OnInit {
     },
     {
       name: 'Nike',
-      note: '4,1',
+      rating: '4,1',
       type: 'Sport',
       price: '$$',
       deliveryTime: '30-45',
@@ -88,7 +88,7 @@ export class HomePage implements OnInit {
     },
     {
       name: 'Micromania',
-      note: '3,7',
+      rating: '3,7',
       type: 'Jeux',
       price: '$$$',
       deliveryTime: '30-45',

@@ -13,7 +13,7 @@
 
     <div class="slider">
       <ion-slides [options]="slideOpts">
-        <ion-slide *ngFor="let category of categories">
+        <ion-slide *ngFor="let category of categories" [routerLink]="['/stores']">
           <div class="category">
             <div class="category__icon">
               <img src="../../assets/icon/{{category.imgName}}.svg" alt="{{category.name}}">
@@ -29,21 +29,23 @@
     <ion-list>
       <ion-item href="#" [lines]="favorites.length === i + 1 ? 'none' : 'full'"
         *ngFor="let favorite of favorites; let i = index">
-        <ion-thumbnail>
-          <img src="../../assets/img/{{favorite.imgName}}.png" alt="{{favorite.name}}">
-        </ion-thumbnail>
-        <div class="favorite__content">
-          <ion-label>{{favorite.name}}</ion-label>
-          <ion-note>
-            <ion-icon name="star"></ion-icon>
-            <span>{{favorite.note}} &#9679; {{favorite.type}} &#9679; {{favorite.price}}</span>
-          </ion-note>
-          <div class="favorite__content__delivery">
-            <ion-badge color="secondary">
-              <ion-icon name="time"></ion-icon>
-              <span>{{favorite.deliveryTime}} min</span>
-            </ion-badge>
-            <span>{{favorite.distance}} km</span>
+        <div class="favorite">
+          <ion-thumbnail>
+            <img src="../../assets/img/{{favorite.imgName}}.png" alt="{{favorite.name}}">
+          </ion-thumbnail>
+          <div class="favorite__content">
+            <ion-label>{{favorite.name}}</ion-label>
+            <ion-note>
+              <ion-icon name="star"></ion-icon>
+              <span>{{favorite.rating}} &#9679; {{favorite.type}} &#9679; {{favorite.price}}</span>
+            </ion-note>
+            <div class="favorite__content__delivery">
+              <ion-badge color="secondary">
+                <ion-icon name="time"></ion-icon>
+                <span>{{favorite.deliveryTime}} min</span>
+              </ion-badge>
+              <span>{{favorite.distance}} km</span>
+            </div>
           </div>
         </div>
       </ion-item>
