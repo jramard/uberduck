@@ -1,14 +1,53 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Ionic Blank
+      Uber Duck
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+    <h1 class="title">Bonjour <span>Julien</span> !</h1>
+
+    <div class="slider">
+      <ion-slides [options]="slideOpts">
+        <ion-slide *ngFor="let category of categories">
+          <div class="category">
+            <div class="category__icon">
+              <img src="../../assets/icon/{{category.imgName}}.svg" alt="{{category.name}}">
+            </div>
+            <div class="category__name">{{category.name}}</div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <h2 class="subtitle">Vos favoris</h2>
+
+    <ion-list>
+      <ion-item href="#" [lines]="favorites.length === i + 1 ? 'none' : 'full'"
+        *ngFor="let favorite of favorites; let i = index">
+        <ion-thumbnail>
+          <img src="../../assets/img/{{favorite.imgName}}.png" alt="{{favorite.name}}">
+        </ion-thumbnail>
+        <div class="favorite__content">
+          <ion-label>{{favorite.name}}</ion-label>
+          <ion-note>
+            <ion-icon name="star"></ion-icon>
+            <span>{{favorite.note}} &#9679; {{favorite.type}} &#9679; {{favorite.price}}</span>
+          </ion-note>
+          <div class="favorite__content__delivery">
+            <ion-badge color="secondary">
+              <ion-icon name="time"></ion-icon>
+              <span>{{favorite.deliveryTime}} min</span>
+            </ion-badge>
+            <span>{{favorite.distance}} km</span>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+
   </div>
 </ion-content>
