@@ -9,7 +9,15 @@
 <ion-content>
   <div class="ion-padding">
 
-    <h1 class="title">Bonjour <span>Julien</span> !</h1>
+    <div class="heading">
+      <div class="heading__navigation">
+        <h1 class="heading__navigation__title">Bonjour <span>Julien</span> !</h1>
+        <ion-text>
+          <p>Livraison au <span>33 rue Emile Zola</span></p>
+        </ion-text>
+      </div>
+      <ion-icon name="contact"></ion-icon>
+    </div>
 
     <div class="slider">
       <ion-slides [options]="slideOpts">
@@ -27,7 +35,7 @@
     <h2 class="subtitle">Vos favoris</h2>
 
     <ion-list>
-      <ion-item href="#" [lines]="favorites.length === i + 1 ? 'none' : 'full'"
+      <ion-item href="#" detail [lines]="favorites.length === i + 1 ? 'none' : 'full'"
         *ngFor="let favorite of favorites; let i = index">
         <div class="favorite">
           <ion-thumbnail>

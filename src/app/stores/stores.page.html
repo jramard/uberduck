@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>Stores</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,10 +10,18 @@
 <ion-content>
   <div class="ion-padding">
 
-    <h1 class="title">Bonjour <span>Julien</span> !</h1>
+    <div class="heading">
+      <div class="heading__navigation">
+        <h1 class="heading__navigation__title">Bonjour <span>Julien</span> !</h1>
+        <ion-text>
+          <p>Livraison au <span>33 rue Emile Zola</span></p>
+        </ion-text>
+      </div>
+      <ion-icon name="contact"></ion-icon>
+    </div>
 
     <ion-list>
-      <ion-item href="#" lines="none" *ngFor="let store of stores">
+      <ion-item href="#" detail="false" lines="none" *ngFor="let store of stores">
         <div class="store">
           <div class="store__content">
             <ion-label>{{store.name}}</ion-label>
