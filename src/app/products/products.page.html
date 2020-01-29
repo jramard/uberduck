@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Rosaparks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <div class="heading">
+      <div class="heading__navigation">
+        <h1 class="heading__navigation__title">Bonjour <span>Julien</span> !</h1>
+        <ion-text>
+          <p>Livraison au <span>33 rue Emile Zola</span></p>
+        </ion-text>
+      </div>
+      <ion-icon name="contact"></ion-icon>
+    </div>
+
+    <div class="background">
+      <ion-img src="../../assets/img/{{store.imgName}}.jpg" alt="{{store.imgName}}"></ion-img>
+    </div>
+
+    <div class="card">
+      <ion-item lines="none">
+        <div class="store">
+          <div class="store__content">
+            <ion-label>{{store.name}}</ion-label>
+            <ion-note>
+              <ion-icon name="star"></ion-icon>
+              <span>{{store.rating}} &#9679; {{store.type}} &#9679; {{store.price}}</span>
+            </ion-note>
+            <div class="store__content__delivery">
+              <ion-badge color="secondary">
+                <ion-icon name="time"></ion-icon>
+                <span>{{store.deliveryTime}} min</span>
+              </ion-badge>
+              <span>{{store.distance}} km</span>
+            </div>
+          </div>
+          <ion-thumbnail>
+            <img src="../../assets/img/{{store.imgName}}.jpg" alt="{{store.name}}">
+          </ion-thumbnail>
+        </div>
+      </ion-item>
+    </div>
+
+    <div class="slider">
+      <ion-slides [options]="slideOpts">
+        <ion-slide *ngFor="let category of categories" [routerLink]="['/stores']">
+          <div class="productCategory">
+            <span class="productCategory__marker" *ngIf="category === activeCategory"></span>
+            <span
+              [class]="category === activeCategory ? 'productCategory__name productCategory__name--active' : 'productCategory__name'">{{category}}</span>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <ion-list>
+      <ion-item href="#" detail [lines]="store.products.length === i + 1 ? 'none' : 'full'"
+        *ngFor="let product of store.products; let i = index">
+        <ion-thumbnail slot="start">
+          <img src="../../assets/img/{{product.imgName}}.jpg" alt="{{product.name}}">
+        </ion-thumbnail>
+        <div class="product__content">
+          <ion-label>{{product.name}} - {{product.price}}€</ion-label>
+          <ion-text color="secondary">
+            <p>{{product.description}}</p>
+          </ion-text>
+        </div>
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>

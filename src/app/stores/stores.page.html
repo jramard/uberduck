@@ -21,7 +21,7 @@
     </div>
 
     <ion-list>
-      <ion-item href="#" detail="false" lines="none" *ngFor="let store of stores">
+      <ion-item href="#" detail="false" lines="none" *ngFor="let store of stores" [routerLink]="['/products']">
         <div class="store">
           <div class="store__content">
             <ion-label>{{store.name}}</ion-label>
