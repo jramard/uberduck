@@ -21,6 +21,27 @@ export class ProductsPage implements OnInit {
 
   activeCategory = 'Burgers';
 
+  basketItems = [
+    {
+      name: 'Classic',
+      description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
+      price: '10,90',
+      imgName: 'classic'
+    },
+    {
+      name: 'Wallace',
+      description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
+      price: '10,90',
+      imgName: 'wallace'
+    },
+    {
+      name: 'Neruda',
+      description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
+      price: '10,90',
+      imgName: 'neruda'
+    },
+  ];
+
   store = {
     name: 'Rosaparks',
     rating: '4,7',
@@ -91,6 +112,8 @@ export class ProductsPage implements OnInit {
     spaceBetween: 15,
     slidesPerView: 'auto',
   };
+
+  showBasket = false;
 
   ngOnInit() {
   }
