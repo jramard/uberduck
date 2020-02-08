@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>
-      Connexion
+      Registration
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -26,15 +26,20 @@
           <ion-input mode="md" type="password" inputmode="password" color="medium" formControlName="password">
           </ion-input>
         </ion-item>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Confirmer le mot de passe</ion-label>
+          <ion-input mode="md" type="password" inputmode="password" color="medium" formControlName="confirmPassword">
+          </ion-input>
+        </ion-item>
       </ion-list>
 
       <ion-button mode="ios" expand="block" color="primary" type="submit" [disabled]="!ionicForm.valid"
         [routerLink]="['/home']">
-        Se connecter
+        S'inscrire
       </ion-button>
     </form>
 
-    <a [routerLink]="['/registration']">S'inscrire</a>
+    <a [routerLink]="['/connection']">Se connecter</a>
 
   </div>
 </ion-content>
