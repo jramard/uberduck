@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Connexion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <div class="logo">
+      <img src="../../assets/logo.svg" alt="Logo">
+      <h1>Uber<span>duck</span></h1>
+    </div>
+
+    <form [formGroup]="ionicForm">
+      <ion-list>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Email</ion-label>
+          <ion-input mode="md" type="email" inputmode="email" color="medium" formControlName="email">
+          </ion-input>
+        </ion-item>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Mot de passe</ion-label>
+          <ion-input mode="md" type="password" inputmode="password" color="medium" formControlName="password">
+          </ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-button mode="ios" expand="block" color="primary" type="submit" [disabled]="!ionicForm.valid"
+        [routerLink]="['/home']">
+        Se connecter
+      </ion-button>
+    </form>
+
+    <a href="">S'inscrire</a>
+
+  </div>
+</ion-content>
