@@ -1,0 +1,31 @@
+.ion-padding {
+    padding: 40px 50px;
+}
+
+ion-list {
+    margin: 0;
+    padding: 0;
+    ion-item {
+        --padding-top: 0;
+        --padding-bottom: 0;
+        --padding-start: 0;
+        --padding-end: 0;
+        --inner-padding-end: 0;
+        ion-label {
+            font-size: 13px;
+        }
+        ion-input {
+            font-size: 13px;
+            --padding-top: 0;
+            --padding-bottom: 0;
+            --padding-start: 0;
+            --padding-end: 0;
+        }
+    }
+}
+
+ion-button {
+    margin: 60px 0 0 0;
+    font-size: 15px;
+    font-weight: 700;
+}

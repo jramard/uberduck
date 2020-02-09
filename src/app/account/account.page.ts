@@ -21,22 +21,22 @@ export class AccountPage implements OnInit {
     {
       name: 'Mes informations',
       imgName: 'user-card',
-      linkName: 'accountInfo'
+      linkName: 'account-info'
     },
     {
       name: 'Mes moyens de paiement',
       imgName: 'wallet',
-      linkName: 'accountPayment'
+      linkName: 'account-payment'
     },
     {
       name: 'Historique des achats',
       imgName: 'shopping-bag',
-      linkName: 'accountHistory'
+      linkName: 'account-history'
     },
     {
       name: 'Mes informations',
       imgName: 'logout',
-      linkName: 'accountLogout'
+      linkName: 'account-logout'
     }
   ];
 

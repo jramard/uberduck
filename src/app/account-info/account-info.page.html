@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Mes informations
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <form [formGroup]="ionicForm">
+      <ion-list>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Prénom</ion-label>
+          <ion-input mode="md" type="text" inputmode="text" color="primary" formControlName="firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Nom</ion-label>
+          <ion-input mode="md" type="text" inputmode="text" color="primary" formControlName="lastName">
+          </ion-input>
+        </ion-item>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Email</ion-label>
+          <ion-input mode="md" type="email" inputmode="email" color="primary" formControlName="email">
+          </ion-input>
+        </ion-item>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Téléphone</ion-label>
+          <ion-input mode="md" type="tel" inputmode="tel" color="primary" formControlName="tel">
+          </ion-input>
+        </ion-item>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Modifier mon mot de passe</ion-label>
+          <ion-input mode="md" type="password" inputmode="password" color="primary" formControlName="password">
+          </ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-button mode="ios" expand="block" color="primary" type="submit" [disabled]="!ionicForm.valid"
+        [routerLink]="['/account']">
+        Modifier
+      </ion-button>
+    </form>
+
+  </div>
+</ion-content>
