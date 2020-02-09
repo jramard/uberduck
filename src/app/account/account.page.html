@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mon compte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <div class="userCard">
+      <ion-item lines="none">
+        <ion-thumbnail>
+          <img src="../../assets/img/{{user.imgName}}.jpg" alt="{{user.name}}">
+        </ion-thumbnail>
+        <div class="userCard__content">
+          <ion-label color="primary">{{user.firstName}} {{user.lastName}}</ion-label>
+          <ion-text>
+            <span>{{user.email}}</span>
+          </ion-text>
+        </div>
+      </ion-item>
+    </div>
+
+    <div class="accountCard">
+      <ion-item lines="none">
+        <div class="accountCard__content">
+          <ion-label>Mon solde</ion-label>
+          <ion-text>
+            <span>{{user.balance}}</span>
+          </ion-text>
+        </div>
+        <ion-thumbnail slot="end">
+          <img src="../../assets/icon/coin.svg" alt="Coin">
+        </ion-thumbnail>
+      </ion-item>
+    </div>
+
+    <ion-list>
+      <ion-item href="#" detail [lines]="parameters.length === i + 1 ? 'none' : 'full'"
+        *ngFor="let parameter of parameters; let i = index" [routerLink]="['/' + parameter.linkName]">
+        <ion-thumbnail>
+          <img src="../../assets/icon/{{parameter.imgName}}.svg" alt="{{parameter.name}}">
+        </ion-thumbnail>
+        <ion-label color="dark">{{parameter.name}}</ion-label>
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>

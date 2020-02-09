@@ -17,7 +17,7 @@
           <p>Livraison au <span>33 rue Emile Zola</span></p>
         </ion-text>
       </div>
-      <ion-icon name="contact"></ion-icon>
+      <ion-icon name="contact" [routerLink]="['/account']"></ion-icon>
     </div>
 
     <div class="background">
@@ -68,7 +68,7 @@
         </ion-thumbnail>
         <div class="product__content">
           <ion-label>{{product.name}} - {{product.price}}€</ion-label>
-          <ion-text color="secondary">
+          <ion-text color="medium">
             <p>{{product.description}}</p>
           </ion-text>
         </div>
