@@ -57,7 +57,7 @@ export class HomePage implements OnInit {
       price: '$$',
       deliveryTime: '20-30',
       distance: '0,8',
-      imgName: 'placeholder'
+      imgName: 'rosaparks'
     },
     {
       name: 'Fnac',
@@ -66,7 +66,7 @@ export class HomePage implements OnInit {
       price: '$$',
       deliveryTime: '10-15',
       distance: '0,3',
-      imgName: 'placeholder'
+      imgName: 'fnac'
     },
     {
       name: 'LDLC',
@@ -75,7 +75,7 @@ export class HomePage implements OnInit {
       price: '$$$',
       deliveryTime: '45-60',
       distance: '7,0',
-      imgName: 'placeholder'
+      imgName: 'ldlc'
     },
     {
       name: 'Nike',
@@ -84,7 +84,7 @@ export class HomePage implements OnInit {
       price: '$$',
       deliveryTime: '30-45',
       distance: '3,2',
-      imgName: 'placeholder'
+      imgName: 'nike'
     },
     {
       name: 'Micromania',
@@ -93,7 +93,16 @@ export class HomePage implements OnInit {
       price: '$$$',
       deliveryTime: '30-45',
       distance: '1,4',
-      imgName: 'placeholder'
+      imgName: 'micromania'
+    },
+    {
+      name: 'Super U',
+      rating: '4,3',
+      type: 'Courses',
+      price: '$$',
+      deliveryTime: '20-30',
+      distance: '4,3',
+      imgName: 'superU'
     }
   ]
 

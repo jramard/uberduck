@@ -17,7 +17,7 @@ export class StoresPage implements OnInit {
       price: '$$',
       deliveryTime: '40-50',
       distance: '2,4',
-      imgName: 'placeholder'
+      imgName: 'rosaparks'
     },
     {
       name: 'O\'Tacos',
@@ -26,7 +26,7 @@ export class StoresPage implements OnInit {
       price: '$$$',
       deliveryTime: '40-50',
       distance: '1,2',
-      imgName: 'placeholder'
+      imgName: 'otacos'
     },
     {
       name: 'Little Korea',
@@ -35,7 +35,7 @@ export class StoresPage implements OnInit {
       price: '$$$',
       deliveryTime: '40-50',
       distance: '1,7',
-      imgName: 'placeholder'
+      imgName: 'littleKorea'
     },
     {
       name: 'Tombouctou',
@@ -44,7 +44,7 @@ export class StoresPage implements OnInit {
       price: '$$',
       deliveryTime: '40-50',
       distance: '2,4',
-      imgName: 'placeholder'
+      imgName: 'tombouctou'
     },
     {
       name: 'Barrio Latino',
@@ -53,7 +53,7 @@ export class StoresPage implements OnInit {
       price: '$$',
       deliveryTime: '40-50',
       distance: '1,8',
-      imgName: 'placeholder'
+      imgName: 'barrioLatino'
     },
     {
       name: 'Le Chat Noir',
@@ -62,7 +62,7 @@ export class StoresPage implements OnInit {
       price: '$$',
       deliveryTime: '40-50',
       distance: '0,5',
-      imgName: 'placeholder'
+      imgName: 'leChatNoir'
     },
     {
       name: 'L\'Tacos',
@@ -71,7 +71,7 @@ export class StoresPage implements OnInit {
       price: '$$',
       deliveryTime: '40-50',
       distance: '0,3',
-      imgName: 'placeholder'
+      imgName: 'ltacos'
     },
     {
       name: 'Signorizza',
@@ -80,7 +80,7 @@ export class StoresPage implements OnInit {
       price: '$',
       deliveryTime: '40-50',
       distance: '2,5',
-      imgName: 'placeholder'
+      imgName: 'signorizza'
     },
     {
       name: 'Bombay Street Food',
@@ -89,7 +89,7 @@ export class StoresPage implements OnInit {
       price: '$$',
       deliveryTime: '40-50',
       distance: '0,9',
-      imgName: 'placeholder'
+      imgName: 'bombayStreetFood'
     },
     {
       name: 'Sushi Shop',
@@ -98,7 +98,7 @@ export class StoresPage implements OnInit {
       price: '$$$',
       deliveryTime: '40-50',
       distance: '1,1',
-      imgName: 'placeholder'
+      imgName: 'sushiShop'
     },
   ];
 
