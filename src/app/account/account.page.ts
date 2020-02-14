@@ -34,9 +34,9 @@ export class AccountPage implements OnInit {
       linkName: 'account-history'
     },
     {
-      name: 'Mes informations',
+      name: 'Déconnexion',
       imgName: 'logout',
-      linkName: 'account-logout'
+      linkName: 'connection'
     }
   ];
 

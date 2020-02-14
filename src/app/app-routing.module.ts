@@ -26,7 +26,11 @@ const routes: Routes = [
   },
   {
     path: 'account-info',
-    loadChildren: () => import('./account-info/account-info.module').then( m => m.AccountInfoPageModule)
+    loadChildren: () => import('./account-info/account-info.module').then(m => m.AccountInfoPageModule)
+  },
+  {
+    path: 'account-history',
+    loadChildren: () => import('./account-history/account-history.module').then( m => m.AccountHistoryPageModule)
   },
 ];
 

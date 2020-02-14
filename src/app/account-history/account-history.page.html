@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Historique des achats
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <ion-segment mode="ios" (ionChange)="segmentChanged($event)">
+      <ion-segment-button mode="ios" value="waiting">
+        <ion-label>En attente</ion-label>
+      </ion-segment-button>
+      <ion-segment-button mode="ios" value="delivered" checked>
+        <ion-label>Livré</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-list>
+      <ion-item-sliding *ngFor="let order of productOrders; let i = index">
+        <ion-item [lines]="productOrders.length === i + 1 ? 'none' : 'full'">
+          <ion-thumbnail slot="start">
+            <img src="../../assets/img/{{order.imgName}}.jpg" alt="{{order.name}}">
+          </ion-thumbnail>
+          <div class="order__content">
+            <ion-label>{{order.name}}</ion-label>
+            <ion-text color="medium">
+              <div>{{order.status}}</div>
+              <div>{{order.price}}€ ● {{order.date}}</div>
+            </ion-text>
+          </div>
+        </ion-item>
+        <ion-item-options>
+          <ion-item-option mode="md" color="danger" (click)="delete(i)">Supprimer</ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+  </div>
+</ion-content>
