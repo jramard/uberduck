@@ -24,19 +24,19 @@ export class ProductsPage implements OnInit {
   basketItems = [
     {
       name: 'Classic',
-      price: '10,90',
+      price: 10.90,
       quantity: 1,
       imgName: 'classic'
     },
     {
       name: 'Wallace',
-      price: '10,90',
+      price: 10.90,
       quantity: 1,
       imgName: 'wallace'
     },
     {
       name: 'Neruda',
-      price: '10,90',
+      price: 10.90,
       quantity: 1,
       imgName: 'neruda'
     },
@@ -54,55 +54,55 @@ export class ProductsPage implements OnInit {
       {
         name: 'Classic',
         description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
-        price: '10,90',
+        price: 10.90,
         imgName: 'classic'
       },
       {
         name: 'Wallace',
         description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
-        price: '10,90',
+        price: 10.90,
         imgName: 'wallace'
       },
       {
         name: 'Neruda',
         description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
-        price: '10,90',
+        price: 10.90,
         imgName: 'neruda'
       },
       {
         name: 'Nine',
         description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
-        price: '10,90',
+        price: 10.90,
         imgName: 'nine'
       },
       {
         name: 'Gassan',
         description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
-        price: '10,90',
+        price: 10.90,
         imgName: 'gassan'
       },
       {
         name: 'Protest',
         description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
-        price: '10,90',
+        price: 10.90,
         imgName: 'protest'
       },
       {
         name: 'Luther',
         description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
-        price: '10,90',
+        price: 10.90,
         imgName: 'luther'
       },
       {
         name: 'Little',
         description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
-        price: '9,90',
+        price: 9.90,
         imgName: 'little'
       },
       {
         name: 'Rosa',
         description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
-        price: '9,90',
+        price: 9.90,
         imgName: 'rosa'
       }
     ]

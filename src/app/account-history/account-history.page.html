@@ -31,7 +31,7 @@
             <ion-label>{{order.name}}</ion-label>
             <ion-text color="medium">
               <div>{{order.status}}</div>
-              <div>{{order.price}}€ ● {{order.date}}</div>
+              <div>{{order.price | number:'1.2-2':'fr-FR'}}€ ● {{order.date}}</div>
             </ion-text>
           </div>
         </ion-item>

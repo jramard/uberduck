@@ -67,7 +67,7 @@
           <img src="../../assets/img/{{product.imgName}}.jpg" alt="{{product.name}}">
         </ion-thumbnail>
         <div class="product__content">
-          <ion-label>{{product.name}} - {{product.price}}€</ion-label>
+          <ion-label>{{product.name}} - {{product.price | number:'1.2-2':'fr-FR'}}€</ion-label>
           <ion-text color="medium">
             <p>{{product.description}}</p>
           </ion-text>

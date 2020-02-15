@@ -13,28 +13,28 @@ export class AccountHistoryPage implements OnInit {
     {
       name: 'Classic',
       status: 'Livrée',
-      price: '10,90',
+      price: 10.90,
       date: '15 janvier 2020',
       imgName: 'classic'
     },
     {
       name: 'Wallace',
       status: 'Livrée',
-      price: '10,90',
+      price: 10.90,
       date: '23 décembre 2019',
       imgName: 'wallace'
     },
     {
       name: 'Nine',
       status: 'Livrée',
-      price: '10,90',
+      price: 10.90,
       date: '18 décembre 2019',
       imgName: 'nine'
     },
     {
       name: 'Neruda',
       status: 'Livrée',
-      price: '10,90',
+      price: 10.90,
       date: '5 décembre 2019',
       imgName: 'neruda'
     },
