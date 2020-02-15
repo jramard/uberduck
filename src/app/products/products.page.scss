@@ -171,6 +171,7 @@ ion-list {
     margin-left: -($padding);
     padding: 0;
     ion-item {
+        cursor: pointer;
         --padding-start: 20px;
         --padding-end: 20px;
         --padding-top: 10px;
@@ -228,12 +229,9 @@ ion-list {
         --detail-icon-color: var(--ion-color-light);
         --detail-icon-opacity: 1;
         --background: var(--ion-color-primary);
-        --background-activated: none;
-        --background-focused: none;
-        --background-hover: none;
-        --highlight-color-focused: none;
-        --highlight-color-invalid: none;
-        --highlight-color-valid: none;
+        --background-activated: var(--ion-color-primary);
+        --background-focused: var(--ion-color-primary);
+        --background-hover: var(--ion-color-primary);
         ion-label {
             flex: 0 1 auto;
             margin: 0 20px 0 0;

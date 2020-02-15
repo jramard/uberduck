@@ -30,7 +30,11 @@ const routes: Routes = [
   },
   {
     path: 'account-history',
-    loadChildren: () => import('./account-history/account-history.module').then( m => m.AccountHistoryPageModule)
+    loadChildren: () => import('./account-history/account-history.module').then(m => m.AccountHistoryPageModule)
+  },
+  {
+    path: 'basket',
+    loadChildren: () => import('./basket/basket.module').then(m => m.BasketPageModule)
   },
 ];
 

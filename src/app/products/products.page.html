@@ -76,7 +76,7 @@
     </ion-list>
 
     <div class="basket" *ngIf="showBasket">
-      <ion-item detail lines="none">
+      <ion-item detail lines="none" [routerLink]="['/basket']">
         <ion-label color="light">Panier</ion-label>
         <ion-thumbnail *ngFor="let item of basketItems">
           <img src="../../assets/img/{{item.imgName}}.jpg" alt="{{item.name}}">

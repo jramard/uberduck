@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mon panier</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <div class="flexContainer">
+
+      <div class="orderInfos">
+        <div class="orderInfos__group">
+          <div class="orderInfos__item">
+            <ion-text>
+              <p>Livraison au <span>33 rue Emile Zola</span></p>
+            </ion-text>
+            <ion-icon mode="ios" name="arrow-down" color="primary"></ion-icon>
+          </div>
+          <div class="orderInfos__item">
+            <ion-text>
+              <p>Paiement via <span>●●●● 2850</span></p>
+            </ion-text>
+            <ion-icon mode="ios" name="arrow-down" color="primary"></ion-icon>
+          </div>
+        </div>
+        <div class="orderInfos__group">
+          <div class="orderInfos__item">
+            <ion-text>
+              <p><span>Maintenant</span></p>
+            </ion-text>
+            <ion-icon mode="ios" name="arrow-down" color="primary"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="deliveryInfos">
+        <ion-text>
+          <p>Livraison de <span>Rosaparks</span></p>
+        </ion-text>
+        <ion-badge mode="ios" color="primary">
+          <ion-icon name="time"></ion-icon>
+          <span>20-30 min</span>
+        </ion-badge>
+      </div>
+
+      <div class="basketItems">
+        <ion-list>
+          <ion-item lines="none" *ngFor="let item of basketItems; let i = index">
+            <ion-thumbnail slot="start">
+              <img src="../../assets/img/{{item.imgName}}.jpg" alt="{{item.name}}">
+            </ion-thumbnail>
+            <div class="item__content">
+              <div class="item__content__quantity">
+                <ion-text><span>x{{item.quantity}}</span></ion-text>
+              </div>
+              <div class="item__content__description">
+                <ion-label>{{item.name}}</ion-label>
+                <ion-text><span>{{item.price * item.quantity | number:'1.2-2':'fr-FR'}}€</span></ion-text>
+              </div>
+            </div>
+            <div class="item__actions" slot="end">
+              <div class="item__actions__delete">
+                <ion-button mode="ios" (click)="delete(i)">
+                  <ion-icon mode="ios" color="dark" name="close"></ion-icon>
+                </ion-button>
+              </div>
+              <div class="item__actions__changeQuantity">
+                <ion-button mode="ios" color="medium"
+                  (click)="item.quantity > 1 ? item.quantity = item.quantity - 1 : delete(i)">-</ion-button>
+                <ion-button mode="ios" color="secondary" [disabled]="item.quantity < 10 ? false : true"
+                  (click)="item.quantity = item.quantity + 1">+</ion-button>
+              </div>
+            </div>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-thumbnail slot="start">
+              <img src="../../assets/img/placeholder.png" alt="Delivery">
+            </ion-thumbnail>
+            <div class="item__content">
+              <div class="item__content__description item__content__description--delivery">
+                <ion-label>Livraison</ion-label>
+                <ion-text><span>Gratuite</span></ion-text>
+              </div>
+            </div>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div class="recapBasket">
+        <ion-badge mode="ios" color="light">
+          <span>{{getTotal() | number:'1.2-2':'fr-FR'}}€</span>
+        </ion-badge>
+        <ion-button mode="ios" color="danger" [disabled]="basketItems.length === 0 ? true : false"
+          [routerLink]="['/home']">
+          Paiement
+        </ion-button>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>

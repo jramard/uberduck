@@ -24,20 +24,20 @@ export class ProductsPage implements OnInit {
   basketItems = [
     {
       name: 'Classic',
-      description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
       price: '10,90',
+      quantity: 1,
       imgName: 'classic'
     },
     {
       name: 'Wallace',
-      description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
       price: '10,90',
+      quantity: 1,
       imgName: 'wallace'
     },
     {
       name: 'Neruda',
-      description: 'Bœuf bio ● comté affiné 18 mois ● laitue iceberg ● cornichons ● oignons caramélisés ● sauce signature',
       price: '10,90',
+      quantity: 1,
       imgName: 'neruda'
     },
   ];
