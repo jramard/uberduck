@@ -7,8 +7,11 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./account.page.scss'],
 })
 export class AccountPage implements OnInit {
+  email: string;
 
-  constructor(public afAuth: AngularFireAuth) { }
+  constructor(public afAuth: AngularFireAuth) {
+    this.email = afAuth.auth.currentUser.email;
+  }
 
   user = {
     firstName: 'Julien',

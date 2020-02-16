@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
   selector: 'app-products',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.page.scss'],
 })
 export class ProductsPage implements OnInit {
+  // public store: any;
 
-  constructor() { }
+  constructor(public afDB: AngularFireDatabase) {
+    // this.afDB.list('/fast-foods').valueChanges().subscribe((data) => {
+    //   this.store = data[0];
+    // });
+  }
 
   categories = [
     'Populaire',
