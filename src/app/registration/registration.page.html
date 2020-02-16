@@ -17,24 +17,45 @@
     <form [formGroup]="ionicForm">
       <ion-list>
         <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Prénom</ion-label>
+          <ion-input mode="md" type="text" inputmode="text" color="medium" formControlName="firstName"
+            [(ngModel)]="userData.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Nom</ion-label>
+          <ion-input mode="md" type="text" inputmode="text" color="medium" formControlName="lastName"
+            [(ngModel)]="userData.lastName">
+          </ion-input>
+        </ion-item>
+        <ion-item mode="md">
           <ion-label mode="md" position="floating" color="medium">Email</ion-label>
-          <ion-input mode="md" type="email" inputmode="email" color="medium" formControlName="email">
+          <ion-input mode="md" type="email" inputmode="email" color="medium" formControlName="email"
+            [(ngModel)]="userData.email">
+          </ion-input>
+        </ion-item>
+        <ion-item mode="md">
+          <ion-label mode="md" position="floating" color="medium">Téléphone</ion-label>
+          <ion-input mode="md" type="tel" inputmode="tel" color="medium" formControlName="tel"
+            [(ngModel)]="userData.tel">
           </ion-input>
         </ion-item>
         <ion-item mode="md">
           <ion-label mode="md" position="floating" color="medium">Mot de passe</ion-label>
-          <ion-input mode="md" type="password" inputmode="password" color="medium" formControlName="password">
+          <ion-input mode="md" type="password" inputmode="password" color="medium" formControlName="password"
+            [(ngModel)]="userData.password">
           </ion-input>
         </ion-item>
         <ion-item mode="md">
           <ion-label mode="md" position="floating" color="medium">Confirmer le mot de passe</ion-label>
-          <ion-input mode="md" type="password" inputmode="password" color="medium" formControlName="confirmPassword">
+          <ion-input mode="md" type="password" inputmode="password" color="medium" formControlName="confirmPassword"
+            [(ngModel)]="userData.confirmPassword">
           </ion-input>
         </ion-item>
       </ion-list>
 
       <ion-button mode="ios" expand="block" color="primary" type="submit" [disabled]="!ionicForm.valid"
-        [routerLink]="['/home']">
+        (click)="signUp()" [routerLink]="['/home']">
         S'inscrire
       </ion-button>
     </form>

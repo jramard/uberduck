@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-connection',
@@ -8,8 +10,13 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 })
 export class ConnectionPage implements OnInit {
   private ionicForm: FormGroup;
+  userData = {
+    email: '',
+    password: ''
+  };
+  connected: boolean;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, public afAuth: AngularFireAuth, private router: Router) {
     this.ionicForm = new FormGroup({
       email: new FormControl('', Validators.compose([
         Validators.required,
@@ -21,6 +28,24 @@ export class ConnectionPage implements OnInit {
         // Validators.pattern('(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s)(?=.*[!@#$*])')
       ]))
     });
+    this.afAuth.authState.subscribe(auth => {
+      if (!auth) {
+        console.log('Not connected');
+        this.connected = false;
+      } else {
+        console.log('Connected as ' + auth.email);
+        this.connected = true;
+        this.router.navigate(['home']);
+      }
+    });
+  }
+
+  login() {
+    this.afAuth.auth.signInWithEmailAndPassword(this.userData.email, this.userData.password);
+    this.userData = {
+      email: '',
+      password: ''
+    };
   }
 
   ngOnInit() {

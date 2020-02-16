@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-account',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountPage implements OnInit {
 
-  constructor() { }
+  constructor(public afAuth: AngularFireAuth) { }
 
   user = {
     firstName: 'Julien',
@@ -39,6 +40,10 @@ export class AccountPage implements OnInit {
       linkName: 'connection'
     }
   ];
+
+  logout() {
+    this.afAuth.auth.signOut();
+  }
 
   ngOnInit() {
   }

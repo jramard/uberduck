@@ -40,7 +40,8 @@
 
     <ion-list>
       <ion-item href="#" detail [lines]="parameters.length === i + 1 ? 'none' : 'full'"
-        *ngFor="let parameter of parameters; let i = index" [routerLink]="['/' + parameter.linkName]">
+        *ngFor="let parameter of parameters; let i = index" [routerLink]="['/' + parameter.linkName]"
+        (click)="parameter.name === 'Déconnexion' ? logout() : ''">
         <ion-thumbnail>
           <img src="../../assets/icon/{{parameter.imgName}}.svg" alt="{{parameter.name}}">
         </ion-thumbnail>

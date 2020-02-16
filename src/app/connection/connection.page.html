@@ -18,18 +18,20 @@
       <ion-list>
         <ion-item mode="md">
           <ion-label mode="md" position="floating" color="medium">Email</ion-label>
-          <ion-input mode="md" type="email" inputmode="email" color="medium" formControlName="email">
+          <ion-input mode="md" type="email" inputmode="email" color="medium" formControlName="email"
+            [(ngModel)]="userData.email">
           </ion-input>
         </ion-item>
         <ion-item mode="md">
           <ion-label mode="md" position="floating" color="medium">Mot de passe</ion-label>
-          <ion-input mode="md" type="password" inputmode="password" color="medium" formControlName="password">
+          <ion-input mode="md" type="password" inputmode="password" color="medium" formControlName="password"
+            [(ngModel)]="userData.password">
           </ion-input>
         </ion-item>
       </ion-list>
 
       <ion-button mode="ios" expand="block" color="primary" type="submit" [disabled]="!ionicForm.valid"
-        [routerLink]="['/home']">
+        (click)="login()">
         Se connecter
       </ion-button>
     </form>
