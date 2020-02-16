@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Livré !
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+    <div class="logo">
+      <img src="../../assets/logo.svg" alt="Logo">
+      <h1>Uber<span>duck</span></h1>
+    </div>
+
+    <div class="deliveredMessage">
+      <ion-item lines="none">
+        <ion-text>
+          <p>Votre commande a bien été livrée ! Merci de bien vouloir prendre le temps de l'évaluer.</p>
+        </ion-text>
+      </ion-item>
+    </div>
+
+    <div class="buttons">
+      <ion-button mode="ios" color="danger" [routerLink]="['/evaluation']">
+        Evaluer ma commande
+      </ion-button>
+      <ion-button mode="ios" color="secondary" [routerLink]="['/home']">
+        Retour à l'accueil
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>

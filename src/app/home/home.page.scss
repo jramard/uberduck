@@ -34,6 +34,7 @@ $unit: 50px;
     ion-icon {
         font-size: 35px;
         color: var(--ion-color-primary);
+        cursor: pointer;
     }
 }
 
@@ -62,6 +63,7 @@ $unit: 50px;
             height: $unit;
             border-radius: 50%;
             background-color: var(--ion-color-light);
+            cursor: pointer;
             img {
                 width: 40%;
                 height: auto;

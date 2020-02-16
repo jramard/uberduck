@@ -36,7 +36,7 @@
 
     <ion-list>
       <ion-item href="#" detail [lines]="favorites.length === i + 1 ? 'none' : 'full'"
-        *ngFor="let favorite of favorites; let i = index">
+        *ngFor="let favorite of favorites; let i = index" [routerLink]="['/stores']">
         <div class="favorite">
           <ion-thumbnail>
             <img src="../../assets/img/{{favorite.imgName}}.jpg" alt="{{favorite.name}}">
